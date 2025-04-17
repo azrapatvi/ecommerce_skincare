@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background: #fff5fa;
+}
+
+nav{
+    
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    
+}
+
+.left {
+    margin: 0px 70px;
+}
+
+.right ul {
+    display: flex;
+    list-style: none;
+    margin: 34px 70px;
+}
+
+.right ul li a {
+    text-decoration: none;
+    color: black;
+
+    padding: 30px 25px;
+}
+
+.right ul li a:hover {
+    border-bottom: 4px solid hwb(343 35% 27%);
+}
+
+
+
+/*first section*/
+
+
+
+.first-section {
+    margin: 40px 70px;
+}
+
+.first-section div {
+    display: flex;
+}
+
+.product1 {
+    margin-top: 25px;
+    width: 530px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+
+.first-right img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.first-right img:hover {
+    content: url('images/p1whoisitfor.webp'); /* Change the image */
+
+}
+
+.product1:hover{
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.8);
+
+}
+
+.first-left {
+    margin: 50px 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.serum-name {
+    font-size: 30px;
+    padding-bottom: 80px;
+}
+
+.product-info {
+    font-size: 18px;
+}
+
+.contents {
+    display: flex;
+    margin: 10px;
+}
+
+.contents li {
+    padding: 30px;
+    margin: 10px;
+    border: 1px solid #bb5975;
+    background: #b75670;
+    color: white;
+    list-style: none;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.buy {
+    padding: 30px;
+    margin-right: 20px;
+    background: #be9aa7;
+    border: 1px solid #be9ba7;
+    color: white;
+    border-radius: 10px;
+}
+
+.buy:hover {
+    border: 1px solid #93747f;
+    background-color: #93747f;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*second section*/
+
+
+
+.second-section {
+    margin: 25vh 70px;
+}
+
+.second-section div {
+    display: flex;
+}
+
+.heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.products img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.products ul {
+    list-style: none;
+    display: flex;
+}
+
+.products ul li {
+    margin-right: 100px;
+    margin-left: 62px;
+    border-radius: 20px;
+    padding-bottom: 0px;
+
+}
+
+.products ul li:hover {
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    transform: scale(1.050);
+}
+
+.serum {
+    margin: 20px 15px;
+}
+
+.info {
+    font-size: 15px;
+}
+
+.price {
+    font-size: 18px;
+}
+
+.buy-serum {
+    width: 100%;
+    padding: 20px 15px;
+    background-color: #be9aa5;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #be9aa5;
+}
+.buy-serum:hover {
+    cursor:pointer;
+}
+.buy-serum23:hover{
+    cursor: pointer;
+}
+.buy-serum23 {
+    width: 100%;
+    padding: 20px 15px;
+    margin-top: 18px;
+    background-color: #be9aa5;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #be9aa5;
+
+}
+
+
+
+.cart-section{
+    background-color: #be9aa7 ;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.total{
+    background-color: #be9aa7;
+}
+#cartItems{
+    background-color: #be9aa7;
+}
+.cart_Ele{
+    background-color: #be9aa7;
+}
+.cart-section h2,ul,p{
+    text-align: center;
+}
+.cart-section ul,li{
+    list-style: none;;
+}
+ul{
+    margin-top: 40px;
+}
+.total{
+    margin:20px;
+}
+
+/*third section*/
+
+
+
+.third-section {
+    margin: 25vh 70px;
+}
+
+.third-section img {
+    margin-top: 50px;
+}
+
+.fourth-section {
+    margin: 25vh 70px;
+}
+
+form {
+    max-width: 1000px;
+    margin: 14px auto;
+}
+
+.form-input {
+    width: 100%;
+    font-size: 19px;
+    padding: 5px 3px;
+    border: 2px solid #be9aa7;
+    border-radius: 6px;
+    margin: 10px auto;
+}
+
+.btn-sub {
+    width: 100%;
+    font-size: 17px;
+    padding: 5px 3px;
+    border: 2px solid #be9aa7;
+    background-color: #be9aa7;
+    color: white;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.btn-sub:hover {
+    border: 2px solid #93747f;
+    background-color: #93747f;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn-res {
+    width: 100%;
+    font-size: 17px;
+    padding: 5px 3px;
+    border: 2px solid #be9aa7;
+    background-color: #be9aa7;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 0px;
+}
+
+.btn-res:hover {
+    border: 2px solid #93747f;
+    background-color: #93747f;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+input::placeholder {
+    color: #be9aa7;
+}
+
+textarea::placeholder {
+    color: #be9aa7;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 150px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    nav {
+        padding: 10px;
+    }
+
+    .first-section div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product1 {
+        margin: 0;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contents li {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right ul li a {
+        padding: 10px;
+    }
+
+    .second-section div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products ul li {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .first-left {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .first-right img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .serum-name {
+        font-size: 20px;
+    }
+
+    .product-info {
+        font-size: 14px;
+    }
+
+    .contents li {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .buy {
+        padding: 10px;
+    }
+
+    .heading {
+        font-size: 18px;
+    }
+
+    .info, .price {
+        font-size: 12px;
+    }
+
+    .form-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn-sub, .btn-res {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}

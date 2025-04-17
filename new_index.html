@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+    <style>
+        .cart-section {
+            background-color: #be9aa7;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 30px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            display: none;
+            z-index: 1000;
+            color: black;
+            width: 320px;
+        }
+
+        .total,
+        #cartItems,
+        .cart_Ele {
+            background-color: #be9aa7;
+        }
+
+        #cartItems li {
+            background-color: #be9aa7;
+            margin: 5px 0;
+            padding: 5px;
+        }
+
+        .total {
+            background-color: #be9aa7;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            color: black;
+        }
+
+        .total span {
+            background-color: #be9aa7 !important;
+        }
+
+
+
+        .cart_Ele {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .checkout_btn {
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: 1px solid #be9aa7;
+            width: 100%;
+        }
+
+        .checkout_btn:hover {
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="header">
+        <nav>
+            <div class="left">
+                <img src="images/logo thephrase.png" alt="logo" class="logo">
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#products">products</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact_us">contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section class="first-section">
+        <div>
+            <div class="first-left">
+                <h1 class="serum-name">Brightening Serum for Hyperpigmentation and Dark Spots - 30 ml</h1>
+
+                <p class="product-info" style="text-align: left;"><b>Glow’in Better than ever</b><br>
+                    Fights dark spots and gently treats hyperpigmentation. Achieve the moisturized and radiant glow
+                    while the little healing drops re-texture your rough-textured skin.<br><br>
+                    <b>We pHrased This For</b><br>
+                    Works best with all skin types
+                </p><br><br>
+                <h3 style="font-size: 30px;">Rs.299.00</h3><br>
+
+                <ul class="contents">
+                    <li>100% organic</li>
+                    <li>clinically approved</li>
+                    <li>herbal products</li>
+                </ul>
+
+                <input type="button" value="Add To Cart!" class="buy" onclick="addToCart('Brightening Serum', 299)">
+            </div>
+
+            <div class="first-right">
+                <img src="images/product1.webp" alt="product 1" class="product1">
+            </div>
+        </div>
+    </section>
+
+    <section class="second-section" id="products">
+        <h1 class="heading">OUR NEWLY LAUNCHED PRODUCTS!</h1>
+
+        <div class="products">
+            <ul>
+                <li>
+                    <img src="images/product2.webp" width="300px">
+                    <p class="serum info">Clarifying Serum for Acne and Acne Marks - 30 ml</p>
+                    <p class="serum price">Rs.299</p>
+                    <input type="button" value="Add To Cart!" class="buy-serum23"
+                        onclick="addToCart('Clarifying Serum', 299)">
+                </li>
+                <li>
+                    <img src="images/product3.webp" width="300px">
+                    <p class="serum info">Moisturising Face Oil for Dry and Dull Skin - 30 ml</p>
+                    <p class="serum price">Rs.299</p>
+                    <input type="button" value="Add To Cart!" class="buy-serum23"
+                        onclick="addToCart('Moisturising Face Oil', 299)">
+                </li>
+                <li>
+                    <img src="images/product4.webp" width="300px">
+                    <p class="serum info">Brightening Gentle Face Wash for Hyperpigmentation and Dark Spots - 30 ml</p>
+                    <p class="serum price">Rs.299</p>
+                    <input type="button" value="Add To Cart!" class="buy-serum"
+                        onclick="addToCart('Brightening Face Wash', 299)">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="cart-section" style="display: none;">
+        <h2 class="cart_Ele">Your Cart</h2>
+        <ul id="cartItems" class="cart_Ele"></ul>
+        <p class="total" style="background-color: #be9aa7;"><strong style="background-color: #be9aa7;">Total: Rs.<span
+                    id="totalPrice">0</span></strong></p>
+        <input type="button" value="Checkout" class="checkout_btn" onclick="take()">
+    </div>
+
+
+    <section class="third-section" id="about">
+        <div>
+            <h1 class="heading">ABOUT</h1>
+            <p class="info-about">
+                We always create gentle formulations for balanced, beautiful skin & hair. All our
+                products are free from Paraben, SLS & Formaldehyde along with being GMP certified, ISO certified, FDA
+                approved. We stand against animal cruelty and only bring you cruelty-free, vegan products that are not
+                tested on any animals.
+            </p>
+            <img src="images/image_with_corrected_background.png" width="100%">
+        </div>
+    </section>
+
+
+
+    <footer>
+        Copyright &copy;2027. All rights reserved
+    </footer>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(productName, price) {
+            alert(`you are adding: "${productName}" price:"${price}"`);
+            cart.push({ name: productName, price: price });
+            total += price;
+            updateCartDisplay();
+            document.querySelector('.cart-section').style.display = 'block';
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItems');
+            const totalPriceDisplay = document.getElementById('totalPrice');
+
+            cartItemsList.innerHTML = '';
+            cart.forEach(function (item) {
+                let li = document.createElement('li');
+                li.textContent = item.name + " - Rs." + item.price;
+                cartItemsList.appendChild(li);
+            });
+
+
+            totalPriceDisplay.textContent = total;
+        }
+        function take() {
+            let itemNames = cart.map(item => item.name).join(',');
+            let itemPrices = cart.map(item => item.price).join(',');
+            let totalPrice = total;
+            // Save to localStorage
+            localStorage.setItem('names', itemNames);
+            localStorage.setItem('prices', itemPrices);
+            localStorage.setItem('total', totalPrice);
+
+            // Redirect to next page
+            window.location.href = "checkout.php";
+        }
+    </script>
+
+</body>
+
+</html>
