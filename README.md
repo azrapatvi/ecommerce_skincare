@@ -6,10 +6,15 @@ The Phrase is a dynamic skincare product landing page that I originally created 
 
 Key Features:
 Beautifully designed product landing page for skincare products
+
 Add to Cart functionality with dynamic product display
+
 A cart summary section appears at the bottom after adding a product
+
 Total pricing and selected products shown during checkout
+
 User fills a checkout form and the submitted data is stored in the database
+
 Admin Panel included to view all submitted user details
 
 Previous version only sent form details via email — now upgraded to full backend handling
